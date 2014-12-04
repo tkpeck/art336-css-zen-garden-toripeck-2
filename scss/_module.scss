@@ -4,7 +4,109 @@ Module Rules
     When defining the rule set for a module, avoid using IDs and element selectors, sticking only to class names. A module will likely contain a number of elements and there is likely to be a desire to use descendent or child selectors to target those elements. 
 */
 
-header[role=banner], .summary {
+.banner, .summary, .chunk1, .chunk2 {
+	margin: 0;
+}
+
+.banner {
+	border-bottom: 5px solid $black;
+	padding-bottom: 100px;
+	text-align: right;
+	background-color: $red;
+}
+
+.banner h1 {
+	@include fontSize(60px);
+	@media screen and (min-width: $tablet) {
+		@include fontSize(80px);
+	}
+	line-height: 1;
+	padding-top: 30px;
+	padding-bottom: 0;
+	color: $white;
+}
+
+.banner h2 {
+	color: $yellow;
+	@include body-font-regular;
+}
+
+.banner, .chunk2, .explanation h3, .explanation p, .participation h3, .participation p, {
+	@media screen and (min-width: $tablet) {
+		box-sizing: border-box;
+		border-right: 5px solid $black;
+	}
+}
+
+.summary {
+	@media screen and (min-width: $tablet) {
+		padding-top: 50px;
+	}
+	@media screen and (max-width: $tabletmin) {
+		border-bottom: 5px solid $black;
+	}
+}
+
+.preamble {
 	box-sizing: border-box;
-	border: 5px solid black;
+	border-bottom: 5px solid $black;
+}
+
+.chunk2 {
+	@media screen and (min-width: $tablet) {
+		padding-bottom: 50px;
+	}
+}
+
+.explanation h3, .explanation p, .participation h3, .participation p, {
+	padding-right: 15px;
+}
+
+.explanation h3 {
+	color: $red;
+}
+
+.participation h3 {
+	border-top: 5px solid $black;
+	@media screen and (min-width: $tablet) {
+		box-sizing: border-box;
+		border-left: 5px solid $black;
+	}
+	background-color: $blue;
+	color: $yellow;
+}
+
+.participation p {
+	@media screen and (min-width: $tablet) {
+		box-sizing: border-box;
+		border-left: 5px solid $black;
+	}
+	background-color: $blue;
+	color: $white;
+}
+
+.participation a, .participation a:visited {
+	color: $white;
+}
+
+.ben-req {
+	@media screen and (min-width: $tablet) {
+		box-sizing: border-box;
+		border-top: 5px solid $black;
+	}
+}
+
+.footer {
+	@media screen and (min-width: $tablet) {
+		box-sizing: border-box;
+		border-top: 5px solid $black;
+	}
+}
+
+.design-selection {
+	text-align: right;
+}
+
+.select, .archives {
+	display: none;
 }

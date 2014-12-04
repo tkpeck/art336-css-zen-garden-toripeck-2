@@ -3,6 +3,17 @@ Base Rules
 	A Base rule is applied to an element using an element selector, a descendent selector, or a child selector, along with any pseudoclasses. It doesn’t include any class or ID selectors. It is defining the default styling for how that element should look in all occurrences on the page.
 */
 
+body {
+	max-width: $desktop;
+    margin: 0 auto;
+    width: 100%;
+	@media screen and (min-width: $desktop) {
+		box-sizing: border-box;
+		border-right: 5px solid $black;
+		border-left: 5px solid $black;
+	}
+}
+
 abbr[title] {
 	border: none;
 }
@@ -13,4 +24,29 @@ h1, h2, h3 {
 
 p, a {
 	@include body-font-regular;
+}
+
+ul {
+	padding: 0;
+}
+
+li {
+	list-style: none;
+	padding-bottom: 10px;
+}
+
+h1, h2, h3, p {
+	margin: 0;
+	padding: 10px;
+
+}
+
+h3 {
+	color: $blue;
+}
+
+a, a:visited {
+	@include body-font-bold;
+	text-decoration: none;
+	color: $black;
 }

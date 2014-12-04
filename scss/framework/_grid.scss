@@ -5,23 +5,27 @@
 // Grid variables
 $desktop: 1140px;
 $tablet: 768px;
+$tabletmin: 767px;
 $mobile: 550px;
 $gutter: 14px;
 $padding: 6px;
 
 // Common to all grids
+.header, .preamble, .exp-part, .ben-req, .footer, .sidebar,
 .row, .row-no-gutter {
     max-width: $desktop;
     margin: 0 auto;
     width: 100%;
 }
 
+.header, .preamble, .exp-part, .ben-req, .footer, .sidebar,
 .row:after, .row-no-gutter:after {
     clear: both;
     content: "";
     display: table;
 }
 
+.banner, .summary, .chunk1, .chunk2, .benefits, .req1, .req2, .links, .contentinfo, .design-selection, .design-archives, .zen-resources,
 [class^="col-"] {
     float: left;
     margin-bottom: $gutter;
@@ -109,7 +113,8 @@ $padding: 6px;
 }
 
 // Columns without verticle gutters
-.row-no-gutter {
+.banner, .summary, .chunk1, .chunk2, .benefits, .req1, .req2, .links, .contentinfo, .design-selection, .design-archives, .zen-resources,
+.row-no-gutter [class^="col-"] {
     @media screen and (min-width: $tablet) {
        box-sizing: border-box;
         padding-left: $gutter/2;
@@ -129,6 +134,7 @@ $padding: 6px;
     }
 }
 
+.summary, .chunk1, .benefits, .req1, .design-archives, .zen-resources, .links,
 .row-no-gutter .col-3 { 
     @media screen and (min-width: $tablet) {
         width: 25%;
@@ -147,6 +153,7 @@ $padding: 6px;
     }
 }
 
+.chunk2, .req2, .design-selection,
 .row-no-gutter .col-6 { 
     @media screen and (min-width: $tablet) {
         width: 50%;
@@ -165,6 +172,7 @@ $padding: 6px;
     }
 }
 
+.banner, .contentinfo,
 .row-no-gutter .col-9 { 
     @media screen and (min-width: $tablet) {
         width: 75%;
