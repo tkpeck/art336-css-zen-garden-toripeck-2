@@ -541,13 +541,14 @@ th {
 }
 
 @media screen and (min-width: 768px) {
-  .summary, .chunk1, .benefits, .req1, .design-archives, .zen-resources, .links,
+  .summary, .chunk1, .benefits, .req1, .design-archives, .zen-resources,
   .row-no-gutter .col-3 {
     width: 25%;
   }
 }
 
 @media screen and (min-width: 768px) {
+  .contentinfo,
   .row-no-gutter .col-4 {
     width: 33.3333333%;
   }
@@ -573,13 +574,14 @@ th {
 }
 
 @media screen and (min-width: 768px) {
+  .links,
   .row-no-gutter .col-8 {
     width: 66.6666666%;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .banner, .contentinfo,
+  .banner,
   .row-no-gutter .col-9 {
     width: 75%;
   }
@@ -814,7 +816,7 @@ Module Rules
 }
 
 @media screen and (min-width: 768px) {
-  .banner, .chunk2, .explanation h3, .explanation p, .participation h3, .participation p {
+  .banner, .chunk2, .explanation h3, .explanation p, .participation h3, .participation p, .benefits {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -894,8 +896,88 @@ Module Rules
   }
 }
 
+.benefits {
+  background-color: #242424;
+  color: white;
+}
+@media screen and (min-width: 768px) {
+  .benefits {
+    padding-bottom: 180px;
+  }
+}
+
+.benefits h3 {
+  color: yellow;
+}
+
+.requirements, .benefits, .ben-req, .req1, .req2 {
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .req2 {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-bottom: 5px solid #242424;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .footer {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-top: 5px solid #242424;
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-bottom: 5px solid #242424;
+  }
+}
+
+.links {
+  text-align: right;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 0;
+}
+@media screen and (max-width: 767px) {
+  .links {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-bottom: 5px solid #242424;
+  }
+}
+
+.links a:last-of-type {
+  padding-right: 10px;
+}
+
+.contentinfo {
+  background-color: yellow;
+}
+@media screen and (min-width: 768px) {
+  .contentinfo {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-left: 5px solid #242424;
+  }
+}
+
+.contentinfo {
+  padding: 0;
+  margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+  aside {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -909,6 +991,61 @@ Module Rules
 
 .select, .archives {
   display: none;
+}
+
+.design-selection nav {
+  padding-right: 10px;
+}
+
+.design-selection, .design-archives {
+  margin: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .design-archives nav, .zen-resources h3, .zen-resources ul {
+    text-align: right;
+    padding-right: 10px;
+  }
+}
+
+.sidebar {
+  margin: 0;
+}
+
+.zen-resources {
+  margin: 0;
+  padding-left: 10px;
+}
+@media screen and (max-width: 767px) {
+  .zen-resources {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-top: 5px solid #242424;
+  }
+}
+@media screen and (min-width: 768px) {
+  .zen-resources {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-left: 5px solid #242424;
+    padding-bottom: 60px;
+  }
+}
+
+.resources {
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+}
+
+.design-selection nav ul li:nth-child(1) a, .design-selection nav ul li:nth-child(3) a, .design-selection nav ul li:nth-child(5) a, .design-selection nav ul li:nth-child(7) a {
+  color: red;
+}
+
+.design-selection nav ul li:nth-child(2) a, .design-selection nav ul li:nth-child(4) a, .design-selection nav ul li:nth-child(6) a, .design-selection nav ul li:nth-child(8) a {
+  color: #3737d3;
 }
 
 /* 

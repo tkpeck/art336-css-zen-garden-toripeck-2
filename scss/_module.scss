@@ -31,7 +31,7 @@ Module Rules
 	@include body-font-regular;
 }
 
-.banner, .chunk2, .explanation h3, .explanation p, .participation h3, .participation p, {
+.banner, .chunk2, .explanation h3, .explanation p, .participation h3, .participation p, .benefits {
 	@media screen and (min-width: $tablet) {
 		box-sizing: border-box;
 		border-right: 5px solid $black;
@@ -96,7 +96,69 @@ Module Rules
 	}
 }
 
+.benefits {
+	@media screen and (min-width: $tablet) {
+		padding-bottom: 180px;
+	}
+	background-color: $black;
+	color: $white;
+}
+
+.benefits h3 {
+	color: $yellow;
+}
+
+.requirements, .benefits, .ben-req, .req1, .req2 {
+	margin-bottom: 0;
+}
+
+.req2 {
+	@media screen and (max-width: $tabletmin) {
+		box-sizing: border-box;
+		border-bottom: 5px solid $black;
+	}
+}
+
 .footer {
+	@media screen and (min-width: $tablet) {
+		box-sizing: border-box;
+		border-top: 5px solid $black;
+	}
+	@media screen and (max-width: $tabletmin) {
+		box-sizing: border-box;
+		border-bottom: 5px solid $black;
+	}
+}
+
+.links {
+	text-align: right;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	@media screen and (max-width: $tabletmin) {
+		box-sizing: border-box;
+		border-bottom: 5px solid $black;
+	}
+	margin: 0;
+}
+
+.links a:last-of-type {
+	padding-right: 10px;
+}
+
+.contentinfo {
+	@media screen and (min-width: $tablet) {
+		box-sizing: border-box;
+		border-left: 5px solid $black;
+	}
+	background-color: $yellow;
+}
+
+.contentinfo {
+	padding: 0;
+	margin: 0;
+}
+
+aside {
 	@media screen and (min-width: $tablet) {
 		box-sizing: border-box;
 		border-top: 5px solid $black;
@@ -109,4 +171,51 @@ Module Rules
 
 .select, .archives {
 	display: none;
+}
+
+.design-selection nav {
+	padding-right: 10px;
+}
+
+.design-selection, .design-archives {
+	margin: 0;
+}
+
+.design-archives nav, .zen-resources h3, .zen-resources ul {
+	@media screen and (max-width: $tabletmin) {
+		text-align: right;
+		padding-right: 10px;
+	}
+}
+
+.sidebar {
+	margin: 0;
+}
+
+.zen-resources {
+	@media screen and (max-width: $tabletmin) {
+		box-sizing: border-box;
+		border-top: 5px solid $black;
+	}
+	@media screen and (min-width: $tablet) {
+		box-sizing: border-box;
+		border-left: 5px solid $black;
+		padding-bottom: 60px;
+	}
+	margin: 0;
+	padding-left: 10px;
+}
+
+.resources {
+	padding-left: 0;
+	padding-right: 0;
+	padding-bottom: 0;
+}
+
+.design-selection nav ul li:nth-child(1) a, .design-selection nav ul li:nth-child(3) a, .design-selection nav ul li:nth-child(5) a, .design-selection nav ul li:nth-child(7) a {
+	color: $red;
+}
+
+.design-selection nav ul li:nth-child(2) a, .design-selection nav ul li:nth-child(4) a, .design-selection nav ul li:nth-child(6) a, .design-selection nav ul li:nth-child(8) a {
+	color: $blue;
 }
